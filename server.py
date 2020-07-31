@@ -7,8 +7,8 @@ port = 5551
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-s.bind((server, port))
 try:
+    s.bind((server, port))
     pass
 except socket.error as e:
     str(e)
