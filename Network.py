@@ -26,5 +26,5 @@ class Network:
 
 
 n = Network()
-print(n.send('hello'))
-print(n.send('working'))
+print(n.send('Network started'))
+print(n.send('Everything Working'))
