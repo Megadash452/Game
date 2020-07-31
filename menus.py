@@ -249,6 +249,14 @@ def main_menu():
 
 
 def new_game():
+    play_button = button('Play', int(border_margin), int(border_margin),
+                         int(200), int(100),
+                         (255, 255, 255), (255, 0, 0), (0, 255, 0), True)
+    if play_button.active():
+        pass
+        #pygame.quit()
+        #client.main()
+
     back_button = button('Back', int(border_margin), int(win_height - border_margin - 64),
                          int(96), int(64),
                          (255, 255, 255), (255, 0, 0), (0, 255, 0), True)

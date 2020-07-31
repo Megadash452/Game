@@ -1,5 +1,6 @@
 import pygame
 from Network import Network
+import menus
 
 win_width = 500
 win_height = 500
