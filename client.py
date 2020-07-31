@@ -54,6 +54,7 @@ def main():
         clock.tick(60)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                # --- Save User's last position, state, and looking direction ---
                 run = False
                 pygame.quit()
 
