@@ -1,6 +1,6 @@
 import pygame
 from Network import Network
-import menus
+#import menus
 
 win_width = 500
 win_height = 500
@@ -60,8 +60,8 @@ def redrawWindow(surface, player, player2):
     pygame.display.update()
 
 
-def main():
-    run = True
+def main(run_bool):
+    run = run_bool
 
     n = Network()
     start_pos = read_pos(n.get_pos())
@@ -87,5 +87,3 @@ def main():
         p.move()
         redrawWindow(win, p, p2)
 
-
-main()
