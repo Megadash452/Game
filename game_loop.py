@@ -1,5 +1,6 @@
 import json
 import pygame
+import client
 
 # import ctypes
 
@@ -262,15 +263,14 @@ def new_game():
                          int(200), int(100),
                          (255, 255, 255), (255, 0, 0), (0, 255, 0), True)
     if play_button.active():
-        pass
-        #pygame.quit()
+        global screen
+        screen = 'in game'
         #client.main()
 
     back_button = button('Back', int(border_margin), int(win_height - border_margin - 64),
                          int(96), int(64),
                          (255, 255, 255), (255, 0, 0), (0, 255, 0), True)
     if back_button.active():
-        global screen
         screen = 'main menu'
 
 
@@ -344,6 +344,10 @@ def settings_menu():
             json.dump(settings, f5)
 
 
+def load_client():
+    pass
+
+
 # \-------------------------------------------------------------------------------------------------------------------\
 # \-------------------------------------------------------------------------------------------------------------------\
 # \-------------------------------------------------------------------------------------------------------------------\
@@ -375,8 +379,6 @@ while run:
                 win = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
 
         if event.type == pygame.QUIT:
-            if screen == 'in game':
-                print('Do you wish to save?')
             run = False
 
     keys = pygame.key.get_pressed()
@@ -403,6 +405,9 @@ while run:
 
     elif screen == 'load menu':
         load_menu()
+
+    elif screen == 'in game':
+        client.main(True)
 
     redrawGameWindow()
 

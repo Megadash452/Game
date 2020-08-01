@@ -1,6 +1,7 @@
 import pygame
 from Network import Network
-#import menus
+
+# import menus
 
 win_width = 500
 win_height = 500
@@ -87,3 +88,5 @@ def main(run_bool):
         p.move()
         redrawWindow(win, p, p2)
 
+
+main(True)
