@@ -1,6 +1,5 @@
 import pygame
 from Network import Network
-from player import Player
 
 # import menus
 
@@ -10,9 +9,16 @@ win = pygame.display.set_mode((win_width, win_height))
 pygame.display.set_caption("Client")
 
 
+# --- Character 1 ---
+
+# --- ---
+
+
 def redrawWindow(surface, player, player2):
     win.fill((0, 50, 50))
     player.draw_hitbox(surface)
+    player.draw_img(surface)
+
     player2.draw_hitbox(surface)
     pygame.display.update()
 

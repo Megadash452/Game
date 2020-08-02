@@ -14,11 +14,16 @@ try:
 except socket.error as e:
     str(e)
 
-s.listen(2)
+s.listen()
 print("Waiting for a connection, Server Started")
 
 
-players = [Player(0, 0, 50, 50, (255, 255, 255), 'right'), Player(100, 100, 50, 50, (50, 50, 50), 'right')]
+players = [Player(0, 0, 64, 50, (255, 255, 255), 'down'),
+           Player(100, 100, 50, 50, (50, 50, 50), 'down'),
+           Player(150, 150, 50, 50, (50, 50, 50), 'down'),]
+
+
+connected = set()
 
 
 def threaded_client(connection, player):
@@ -37,9 +42,6 @@ def threaded_client(connection, player):
                     reply = players[0]
                 else:
                     reply = players[1]
-
-                #print("Received: ", data)
-                #print("Sending : ", reply)
 
             connection.sendall(pickle.dumps(reply))
         except:
