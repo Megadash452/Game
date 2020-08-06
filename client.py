@@ -9,7 +9,7 @@ win = pygame.display.set_mode((win_width, win_height))
 pygame.display.set_caption("Client")
 
 
-# --- Character 1 ---
+# ---  ---
 
 # --- ---
 
@@ -20,6 +20,7 @@ def redrawWindow(surface, player, player2):
     player.draw_img(surface)
 
     player2.draw_hitbox(surface)
+    player.draw_img(surface)
     pygame.display.update()
 
 

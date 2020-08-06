@@ -18,9 +18,9 @@ s.listen()
 print("Waiting for a connection, Server Started")
 
 
-players = [Player(0, 0, 64, 50, (255, 255, 255), 'down'),
+players = [Player(5, 5, 64, 50, (255, 255, 255), 'down'),
            Player(100, 100, 50, 50, (50, 50, 50), 'down'),
-           Player(150, 150, 50, 50, (50, 50, 50), 'down'),]
+           Player(150, 150, 50, 50, (50, 50, 50), 'down')]
 
 
 connected = set()
