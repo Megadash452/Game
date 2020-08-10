@@ -362,10 +362,10 @@ def redrawGameWindow():
 run = True
 save_file = file('', '')
 screens = {
-    1: main_menu(),
-    2: settings_menu(),
-    3: load_menu(),
-    4: new_game()
+    1: main_menu,
+    2: settings_menu,
+    3: load_menu,
+    4: new_game
 }
 screen = 'main menu'
 while run:
