@@ -1,8 +1,5 @@
 import json
 import pygame
-import client
-
-# import ctypes
 
 pygame.init()
 
@@ -21,7 +18,7 @@ except FileNotFoundError:
         }
         json.dump(write, f)
     exit('Please run file Again. The first run creates all needed files. The second run will work like a charm!')
-# ---
+# --- ---
 
 
 # --- Window Properties ---
